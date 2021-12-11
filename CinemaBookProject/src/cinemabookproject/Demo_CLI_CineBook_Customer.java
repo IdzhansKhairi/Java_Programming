@@ -1,6 +1,7 @@
 package cinemabookproject;
 import java.util.Scanner;
 import java.util.Random;
+// Make a research on hwo to store input into excel and how to read
 /**
  *
  * @author Idzhans Khairi
