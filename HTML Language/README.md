@@ -10,7 +10,12 @@
 
 
 ## HTML - Code Editor Setup
-### 1. Using codepen.io
+### 1. Using Text File
+- Create a text file
+- Edit a little bit by adding some HTML Codes
+- Save it as .html file
+
+### 2. Using codepen.io
 ```html
 <h1>HEY HEADING</h1>
 
@@ -20,4 +25,8 @@
 ```
 ![Intro Codepen](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/Screenshot%202022-02-25%20202747.png)
 
-### 2. Using VS COde
+### 3. Using VS COde
+
+
+## HTML - Structure of a HTML Document
+
