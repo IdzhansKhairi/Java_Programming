@@ -1,5 +1,6 @@
 # HTML Notes
 
+# **1. HTML INTRODUCTION**
 ## HTML - Introduction
 - HTML = Hyper Text Markup Language
 - One of 3 cores of development technologies which is HTML, CSS, JavaScript
@@ -16,17 +17,107 @@
 - Save it as .html file
 
 ### 2. Using codepen.io
-```html
-<h1>HEY HEADING</h1>
-
-<p>
-  This is my first paragraph
-</p>
-```
 ![Intro Codepen](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/Screenshot%202022-02-25%20202747.png)
 
-### 3. Using VS COde
+### 3. Using VS Code
+![Intro VS Code](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20pic%201.png)
 
 
 ## HTML - Structure of a HTML Document
+Lets us consider the following code :
+```html
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>My HTML Page</title>
+</head>
+<body>
+        <!--Other HTML Elements-->
+        <p>This is an HTML Paragraph</p>
+        <h1>This is a heading tag</h1>
+
+        <img/>
+        <br/>
+</body>
+</html>
+```
+- The first line is document type. A HTML Page always starts with the document type declaration or doc type. This is a way to tell the browser what type of document it is.
+- The 2nd line is the HTML tags. It represents the route of an HTML documents. It is the countainer of all other HTML elements.
+- The *head* elements contain metadata like document title, character set, styles, links, scripts and etc.
+- The *meta* elements is used to specify the metadata to provide browsers and search engines with technical information about the webpage like in this case it specifies the character encoding for this HTML document as *UTF-8*.
+- The *title* elements is to define our title document. So the title is visible in the browser tab.
+- The *body* tag contains the content of the document that contain all of the HTML elements that used to design a webpage. For examples, headings, images, paragraph, lists, etc.
+- The *p* tag is for paragraph
+- A HTML tags is a combinational of characters enclosed in angle brackets. Each tags have different purpose. For example *p* is for paragraph tag and *h1* is for heading tag.
+- There are 2 types of tags in HTML which is **paired** and **unpaired** tags. Some tags need a closing tags because there are some content. For example the paragraph and heading tab need closing tag.
+- The *img* which is image tag and *br* which is break line tab does not require closing tag and called **unpaired** tag.
+
+
+
+
+
+# **2. HTML BASICS**
+## HTML - Adding Heading in a Webpage
+- HTML provides us with 6 different heading tags from *h1* to *h6*.
+- *h1* represents the most important headings and *h6* represents the least important headings.
+- Consider the following code :
+```html
+<html>
+<head>
+        <title>HTML - Headings</title>
+</head>
+<body>
+        <h1>I am a h1 Heading</h1>
+        <h2>I am a h2 Heading</h2>
+        <h3>I am a h3 Heading</h3>
+        <h4>I am a h4 Heading</h4>
+        <h5>I am a h5 Heading</h5>
+        <h6>I am a h6 Heading</h6>
+</body>
+</html>
+```
+![HTML - Headings](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Headings.png)
+
+
+## HTML- Adding Paragraph in a Webpage
+- To write a paragraph, we will be using *p* tags.
+- To bold a certain word or sentence in the paragraph, we will use *b* tags.
+- To italic a certain word or sentence in the paragraph, we will use *i* tags.
+- There are 2 ways to make a sentence in the next line, by *br* tags or *pre* tags.
+- **br tags :** The br element represents a break line
+- **pre tags :** The pre elements represents a block of preformatted text in which structure is represented by typographics conventions rather than by elements.
+```html
+<html>
+<head>
+        <title>HTML - Paragraphs</title>
+</head>
+<body>
+        <p>Everyone is a <b>genius</b>. <br/>
+                But if you <i>judge a fish</i> by its ability to climb a tree, <br/>
+                it will live its whole life believing that it is stupid.</p>
+
+        <pre>
+        <p>Everyone is a <b>genius</b>.
+But if you <i>judge a fish</i> by its ability to climb a tree,
+it will live its whole life believing that it is stupid.</p>
+        </pre>
+        
+</body>
+</html>
+```
+![HTML Paragraphs](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Paragraphs.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
