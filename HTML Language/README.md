@@ -109,8 +109,72 @@ it will live its whole life believing that it is stupid.</p>
 ![HTML Paragraphs](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Paragraphs.png)
 
 
+## HTML - Adding Images in a Web Page
+- By using the *img* tags, we don't need to put the closing tag.
+- *img* tags requires 2 attributes which is *src* and alternate tag *(alt)*
+- *src* values specifies the location of the image and *alt* tag is the description of the image.
+- *src* ust copy image address
+```html
+<html>
+<head>
+        <title>HTML - Embed Image</title>
+</head>
+<body>
+        <img src="https://www.prestigeanimalhospital.com/sites/default/files/interesting-cat-facts.jpg" alt="Cute Cat Picture"/>
+</body>
+</html>
+```
+![HTML - Pictures 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%201.png)
+
+- However as we can see the picture is to big.
+- We can add another attribute which is height and width.
+- The number input is not represents pixel
+```html
+<html>
+<head>
+        <title>HTML - Embed Image</title>
+</head>
+<body>
+        <img src="https://www.prestigeanimalhospital.com/sites/default/files/interesting-cat-facts.jpg" alt="Cute Cat Picture" 
+        width="600" height="350" />
+</body>
+</html>
+```
+![HTML - Pictures 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%202.png)
+
+- Now let's say we have our own image in the local file in our computer.
+- In this method we are selecting offline images.
+- The picture down here shows the jpg files located in my computer.
+![Pic in File](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%203.png)
+```html
+<html>
+<head>
+        <title>HTML - Embed Image</title>
+</head>
+<body>
+        <img src="/HTML Language/16_2_2022__1_35_11.png" alt="Windbound 1" width="600" height="350" />
+</body>
+</html>
+```
+![HTML - Pictures 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%204.png)
+
+- Now lets us look back at *alt* tags. The *alt* tags is some sort of the description of the image that you are using.
+- It has two focus. First, if the image cannot loaded for any reason, it shows this tet to the web users.
+- Second, this attribute help the search engine and makes the image. For example if a person was looking a picture in google, google as the search engine will try to match the search from the user with the search results. And that's why adding an appropriate alt text is important.
+```html
+<html>
+<head>
+        <title>HTML - Embed Image</title>
+</head>
+<body>
+        <img src="/HTML Language/16_2_2022__1_35_11.jpg" alt="Windbound boat Scenary" width="600" height="350" />
+</body>
+</html>
+```
+![HTML - Pictures](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%205.png)
 
 
+## HTML - Creating Ordered and Unordered List
 
 
 
