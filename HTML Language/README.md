@@ -175,6 +175,119 @@ it will live its whole life believing that it is stupid.</p>
 
 
 ## HTML - Creating Ordered and Unordered List
+- There are two types of list which is ordered list and unordered list.
+- Odered list have a sequence which can be 1, 2, 3, or A, B, C and so on.
+- Unordered list don't have sequence which it is more like a bullet points.
+- For ordered list, we using the *ol* tags and it also needs closing tags. In the *ol* block, it also needs *li* tags which is represents a list of items.
+- **ol :** The *ol* elements represents a list of items, where the items have been intentionally ordered, such as changing the order would change the meaning of the document.
+- **li :** The *li* element represents a list item. If its parents element is an *ol*, *ul* or menu element, then the element is an item of the parent element's list, as defined for those elements. Otherwise, the list item has no defined list-related relationship to any other *li* element.
+- Note : To make a few lines as comment, CTRL + /.
+```html
+<html>
+<head>
+        <title>HTML - List</title>
+</head>
+<body>
+        <h1>Planets in Solar System</h1>
+        <ol>
+                <li>Mercury</li>
+                <li>Venus</li>
+                <li>Earth</li>
+                <li>Mars</li>
+                <li>Jupiter</li>
+                <li>Saturn</li>
+                <li>Uranus</li>
+                <li>Neptune</li>
+                <li>Pluto</li>
+        </ol>
+</body>
+</html>
+```
+![HTML - List 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%201.png)
+
+- By default, the ordered list will be in number in increasing order.
+- However this can be change for many kind of style of ordered list.
+- Change it by adding type at the *ol*.
+- There are a lot of types for the ordered list style :
+![HTML - Ordered List Types](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%203.png)
+
+```html
+<html>
+<head>
+        <title>HTML - List</title>
+</head>
+<body>
+        <h1>Planets in Solar System</h1>
+        <ol type="A">
+                <li>Mercury</li>
+                <li>Venus</li>
+                <li>Earth</li>
+                <li>Mars</li>
+                <li>Jupiter</li>
+                <li>Saturn</li>
+                <li>Uranus</li>
+                <li>Neptune</li>
+                <li>Pluto</li>
+        </ol>
+</body>
+</html>
+```
+![HTML - List 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%202.png)
+
+- For unordered list, the HTML tag is *ul*.
+- The dot bullet is the default bullet.
+```html
+<html>
+<head>
+        <title>HTML - List</title>
+</head>
+<body>
+        <h1>Planets in Solar System</h1>
+        <ul>
+                <li>Mercury</li>
+                <li>Venus</li>
+                <li>Earth</li>
+                <li>Mars</li>
+                <li>Jupiter</li>
+                <li>Saturn</li>
+                <li>Uranus</li>
+                <li>Neptune</li>
+                <li>Pluto</li>
+        </ul>
+</body>
+</html>
+```
+![HTML - List 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%204.png)
+
+- To change the type of the bullet, we add style="" at the *ul* tag.
+- There are a lot of choices of style of the unordered list bullets.
+![Unordered List Type](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%206.png)
+```html
+<html>
+<head>
+        <title>HTML - List</title>
+</head>
+<body>
+        <h1>Planets in Solar System</h1>
+        <ul style="list-style-type:square">
+                <li>Mercury</li>
+                <li>Venus</li>
+                <li>Earth</li>
+                <li>Mars</li>
+                <li>Jupiter</li>
+                <li>Saturn</li>
+                <li>Uranus</li>
+                <li>Neptune</li>
+                <li>Pluto</li>
+        </ul>
+</body>
+</html>
+```
+![HTML - List 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%205.png)
+
+
+
+
 
 
 
