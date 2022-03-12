@@ -421,7 +421,71 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ![HTML - Styling 9](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%209.png)
 
 
-## HTML - Block and Inline Values
+## HTML - Block and Inline Display Values
+- Every HTML elements has a default display value which either can be block or inline.
+- A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+- A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+- An inline element does not start on a new line.
+- An inline element only takes up as much width as necessary.
+![HTML Block Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Blocks).png)
+![HTML Inline Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Inline).png)
+
+- Now this is an example of block value.
+- As we can see it taking the entire available space of our screen
+```html
+<html>
+<head>
+        <title>Block vs Inline Elements</title>
+</head>
+<body>
+        <div style="background-color: lightblue">
+                <h2>This is a heading</h2>
+                <p>This is another paragraph</p>
+        </div>
+
+        <h2 style="background-color: lightcoral">This is a heading</h2>
+        <p style="background-color: lightgreen">This is another paragraph</p>
+</body>
+</html>
+```
+![HTML - Block vs Inline 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%201.png)
+
+- Below here is an example of the Inline Value
+- As we can see even coded in different lines, the words are in one line on the websites.
+- This is actually perfect to make it look like menu items.
+```html
+<html>
+<head>
+        <title>Block vs Inline Elements</title>
+</head>
+<body>
+        <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Home</span>
+        <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Profile</span>
+        <span style="background-color:lightblue; font-size: 24px; padding: 12px;">About</span>
+        <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Contact</span>
+</body>
+</html>
+```
+![HTML - Block vs Inline 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%202.png)
+
+- As we can see, we can also combine the Block and Inline together.
+- This makes the website have top bar with menu items.
+```html
+<html>
+<head>
+        <title>Block vs Inline Elements</title>
+</head>
+<body>
+        <div style="background-color:lightseagreen; padding:24px">
+                <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Home</span>
+                <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Profile</span>
+                <span style="background-color:lightblue; font-size: 24px; padding: 12px;">About</span>
+                <span style="background-color:lightblue; font-size: 24px; padding: 12px;">Contact</span>
+        </div>
+</body>
+</html>
+```
+![HTML - Block vs Inline 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%203.png)
 
 
 
