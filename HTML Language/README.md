@@ -488,6 +488,133 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ![HTML - Block vs Inline 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%203.png)
 
 
+## HTML - Adding Group Styles Using Class Attributes
+- How to style a group of HTML elements with the same styling.
+- Let's us look at the following code down below.
+```html
+<html>
+<head>
+        <title>Adding Group Styles Using Class Attributes</title>
+</head>
+<body>
+        <div>
+                <img src="https://cdn.mos.cms.futurecdn.net/xLXT69hv4k2U5pfKLBCanC-970-80.jpg" alt="Mercury">
+                <p>
+                        Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's 
+                        moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury 
+                        experiences dramatic changes in its day and night temperatures: Mercury temperatures can reach a scorching 
+                        840 F (450 C) in the day, which is hot enough to melt lead. Meanwhile, on the night side, temperatures drop 
+                        to minus 290 F (minus 180 C). 
+                </p>
+        </div>
+
+        <div>
+                <img src="https://cdn.mos.cms.futurecdn.net/oFF43BjXYUyyMTTJLFpeDE-970-80.jpg" alt="Venus">
+                <p>
+                        The second planet from the sun, Venus is Earth's twin in size. Radar images beneath its atmosphere reveal 
+                        that its surface has various mountains and volcanoes. But beyond that, the two planets couldn't be more 
+                        different. Because of its thick, toxic atmosphere that's made of sulfuric acid clouds, Venus is an extreme 
+                        example of the greenhouse effect. It's scorching-hot, even though Mercury is closer to the sun, Venus is 
+                        the hottest planet in the solar system. 
+                </p>
+        </div>
+</body>
+</html>
+```
+![HTML - Group Styling 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%201.png)
+
+- As we can see above, there are two planets with some description. Let's us modify the website a little bit.
+- To modify it a little bit we have to add style at each of the attribute.
+- As we can see, a little modification has been made below.
+```html
+<html>
+<head>
+        <title>Adding Group Styles Using Class Attributes</title>
+</head>
+<body>
+        <div>
+                <img src="https://cdn.mos.cms.futurecdn.net/xLXT69hv4k2U5pfKLBCanC-970-80.jpg" alt="Mercury" style="height: 350px;
+                width: 350px;">
+                <p style="font-size: 24px; line-height: 1.5">
+                        Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's 
+                        moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury 
+                        experiences dramatic changes in its day and night temperatures: Mercury temperatures can reach a scorching 
+                        840 F (450 C) in the day, which is hot enough to melt lead. Meanwhile, on the night side, temperatures drop 
+                        to minus 290 F (minus 180 C). 
+                </p>
+        </div>
+
+        <div>
+                <img src="https://cdn.mos.cms.futurecdn.net/oFF43BjXYUyyMTTJLFpeDE-970-80.jpg" alt="Venus" style="height: 350px;
+                width: 350px">
+                <p style="font-size: 24px; line-height: 1.5">
+                        The second planet from the sun, Venus is Earth's twin in size. Radar images beneath its atmosphere reveal 
+                        that its surface has various mountains and volcanoes. But beyond that, the two planets couldn't be more 
+                        different. Because of its thick, toxic atmosphere that's made of sulfuric acid clouds, Venus is an extreme 
+                        example of the greenhouse effect. It's scorching-hot, even though Mercury is closer to the sun, Venus is 
+                        the hottest planet in the solar system. 
+                </p>
+        </div>
+</body>
+</html>
+```
+![HTML - Group Styling 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%202.png)
+
+- However, the problem is that when I wanted to change style, I have to put styling in each elements.
+- Luckily as in this code above, we only have 2 elements which is Mercury and Venus.
+- Imagine if we have to put styling in so many elements for example 100 elements.
+- To solve this problem, we can use classes to bring all the styles together.
+- For example here we added _class="planet-image"_ to each of the images attributes and _class="planet-desc"_ to each of the paragraph attribute.
+- And then we add _style_ tags under the _title_ tags.
+- In the _style_ we add _.planet-image_ and _.planet-desc_ with curly bracket. And then we add the styling we wanted.
+- This time we change the height of the image is 350px and the width of the image is 550px.
+```html
+<html>
+<head>
+        <title>Adding Group Styles Using Class Attributes</title>
+
+        <style>
+                .planet-image{
+                        height: 350px; 
+                        width: 550px;
+                }
+                .planet-desc{
+                        font-size: 24px; 
+                        line-height: 1.5;
+                }
+        </style>
+</head>
+<body>
+        <div>
+                <img class="planet-image" src="https://cdn.mos.cms.futurecdn.net/xLXT69hv4k2U5pfKLBCanC-970-80.jpg" alt="Mercury">
+                <p class="planet-desc" style="font-size: 24px; line-height: 1.5">
+                        Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's 
+                        moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury 
+                        experiences dramatic changes in its day and night temperatures: Mercury temperatures can reach a scorching 
+                        840 F (450 C) in the day, which is hot enough to melt lead. Meanwhile, on the night side, temperatures drop 
+                        to minus 290 F (minus 180 C). 
+                </p>
+        </div>
+
+        <div>
+                <img class="planet-image" src="https://cdn.mos.cms.futurecdn.net/oFF43BjXYUyyMTTJLFpeDE-970-80.jpg" alt="Venus">
+                <p class="planet-desc">
+                        The second planet from the sun, Venus is Earth's twin in size. Radar images beneath its atmosphere reveal 
+                        that its surface has various mountains and volcanoes. But beyond that, the two planets couldn't be more 
+                        different. Because of its thick, toxic atmosphere that's made of sulfuric acid clouds, Venus is an extreme 
+                        example of the greenhouse effect. It's scorching-hot, even though Mercury is closer to the sun, Venus is 
+                        the hottest planet in the solar system. 
+                </p>
+        </div>
+</body>
+</html>
+```
+![HTML - Group Styling 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%203.png)
+
+
+## HTML - Adding Hyperlinks in a Webpage
+
+
 
 
 
