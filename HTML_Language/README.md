@@ -613,12 +613,96 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 
 
 ## HTML - Adding Hyperlinks in a Webpage
+- How to add a link in a HTML page.
+- Link could be a text, an image or any HTML elemnets.
+- When the user click on this link, it can redirect to a website or a different web page of the same website or the different section within the same webpage.
+- The tags is _a href=""_ that also needs a closing tags. _href_ defines where the user needs to be redirected.
+- We will use this [Virtual Piano Link](https://www.onlinepianist.com/virtual-piano) to redirect us to the website in the HTML page.
+- We will put the website links at the _href=""_ and then we add the HTML elements inside the _a_ tags.
+- Consider the following code where we use text (It will open new URL in the same browser tab) :
+```html
+<html>
+<head>
+        <title>HTML - Links</title>
+</head>
+<body>
+        <a href="https://www.onlinepianist.com/virtual-piano">Virtual Piano - Online Piano Keyboard | Online Pianist</a>
+</body>
+</html>
+```
+![HTML - Hyperlinks 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Hyperlinks%201.png)
+![HTML - Hyperlinks 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Hyperlinks%202.png)
+
+- We can also make it to open in a new tab.
+- For that we have to use another attribute called _target="_blank"_ 
+```html
+<html>
+<head>
+        <title>HTML - Links</title>
+</head>
+<body>
+        <a href="https://www.onlinepianist.com/virtual-piano" target="_blank">Virtual Piano - Online Piano Keyboard | Online Pianist</a>
+</body>
+</html>
+```
+![HTML - Hyperlinks 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Hyperlinks%203.png)
+
+- Now let's create an image link
+- First we find an image and copy its image address.
+- And then we put the tag inside our _a_ tags with closing tags.
+- As we can see, we can click the image and it will redirect us to our desire website
+```html
+<html>
+<head>
+        <title>HTML - Links</title>
+</head>
+<body>
+        <a href="https://www.onlinepianist.com/virtual-piano" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqCAMAAAAKqCSwAAAAIVBMVEX///8AAADi4uKOjo5hYWE8PDwQEBAhISGtra3X19fy8vLU3QgAAAAEUElEQVR4nO2a2ZKjMAxFQd4w///Bo8UbgTAzL3Ye7qlZKmm6ciIkWYC3DQAAAAAAAAAAAAAAAAAAAAAAAAAAADAXcj6EuDMxeO9otc83nFfJkeCd82zPeLfar0KuerKV/CkvB/v4E7LkTSa4TAUXimBKiYOaknyL9RmhEY3hoEbLhZgkCZS03pWCnt3ueXwkLQdb4dD7paZOZLw5cg21LL3aqmvY40pTyVKfRTM8KHZXTYN9X1ha4uco+/TmaZ1B03VdBrBpPJx5cgE9n/3uujADxNTsUuh1vifvn1y9FNaiHuBri6+elo9J2uqTq+OutiZZR52o7dNrWAN9cU2rkvXzJCfr9dFU6SkH/BLVp94UXI8q0cMBaYHqY8xaQyqr1kMDm6/6FDE7w5IAVTXfXePsbuW+ds+kRU7fXSevV/TS570snsOEdT8izFR9ztMa1n0fhsGPKSscYW5YX4LKNrwgXTmctysW+Qp5bljfTEWW3pi7tr5Oe5dUfWDuIEivpunVlLgmZ2bAW11dimpIWMnYlLxmwETVt8K6n36W7P11dgZ8D2v6iOnhh8SWC2x+a67q13X1UkCDZuROpd+Q35973cql8bBmDjcCchu8eDTMtUH5PZJMXBPrSgKTPyPbRZtn9Icq8jk/5P+0p22+KlePi0+i7eI19BNNJT3lHWkBE6crU2Wreg/N5xrPVMMpCd2UkgbysE4WZnYrUc21dPhatdZRzQmrcFdO+6ZJutWqmq56tFt+rS31fHD1qJoBTuqKZFJZF1W6BrSEtZRNzwCtKy//qOrMKwGO19k9S84mR1spqUGwfTf+K/U/WzWOqqFUlvygXP0fVdD3XwglqJPnlTAMpUcJaLXTVaseltovROtU01crmY5asqZe6XXJLYaujdEyNCTaylebOQOIQ8uAvA+uh4U11xdH+wbRTGUInKlK47Cneu3TrcJKMMu51nTOZjp7XpV5pWWAhbI+kXAxtgytqxSnSKqmk6vKFp6WASbDE2CRreffVimdawJV0+k32fUDe1jLUxZrWNRlXFkV+HX9XvPvBsvNp95atxJYnk4P0llPnQ+7WpDcGFrb3POvGdDDSjaV1mk7ytPLVF+F3EWn17+gs8ewuOqb9wctSRO4H3ZOvxW43cJKdbmSi+gY5bmqd3YNMByTFwRVbwdyU7/OV0+HXZmfqYJrizp98b396Jx8H7Chn3s+yH7jXPY8WKYo+g/X0+kgsAT76H91PWlfdPoFr+3931xPuS2/9rm1rO6fl4R3sowpazcu2Bz618Ce+lBm7RYL2w+wvQc2n7bBYa1p2WVBL7IsSmFlRXV074p40Hm3zSfZQ84f2WQVmgrbdt0snmWv2OpdSw3bZ1WvAriKGHvhdGL9jZAaZQtYvOxYpLJJ8JdEhcueQNltVe8Khh8TVR53Wv5Kjt4gV/cv/fb+VQAAAAAAAAAAAAAAAAAAAAAAAAAAAP6HP28kHNstejd+AAAAAElFTkSuQmCC" alt="Online Pianist Logo" />
+        </a>
+</body>
+</html>
+```
+![HTML - Hyperlinks 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Hyperlinks%204.png)
 
 
+## HTML - Using Links to Connect Web Pages
+- We will learn on how to use links to navigate to different web views.
+- So let's us create three different pages to be redirected.
+- We will use the Online Pianist **home**, **keyboard** and **contact**.
+```html
+<html>
+<head>
+        <title>HTML - Using Links to Connect Webpage</title>
+
+        <style>
+                .menu-item{
+                        display: inline;
+                        padding: 12px 16px;
+                        background-color: lightblue;
+                }
+        </style>
+</head>
+<body>
+      <ul style="list-style-type: none">
+        <li class="menu-item"><a href="https://www.onlinepianist.com/" target="_blank">Home</a></li>
+        <li class="menu-item"><a href="https://www.onlinepianist.com/virtual-piano" target="_blank">Keyboard</a></li>
+        <li class="menu-item"><a href="https://www.onlinepianist.com/contact" target="_blank">Contact</a></li>
+      </ul>  
+</body>
+</html>
+```
+### Our web page
+![HTML - Links 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Links%201.png)
+### Home
+![HTML - Links 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Links%202.png)
+### Keyboard
+![HTML - Links 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Links%203.png)
+### Contact
+![HTML - Links 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Links%204.png)
 
 
-
-
+HTML - Uniquely Identify HTML Elements by Using ID Attribute
 
 
 
