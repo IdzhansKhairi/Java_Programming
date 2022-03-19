@@ -1,4 +1,4 @@
-# Programming League National (PLN) 2022
+# Programming League National (PLN) 2022 - Preliminary Round
 
 ## Question A - Sentence Reconstructing
 ![PLN2022 Question A1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/Java_Language/PLN_2022/Media/PLN2022%20Question%20A1.png)
