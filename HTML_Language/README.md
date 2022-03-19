@@ -17,10 +17,10 @@
 - Save it as .html file
 
 ### 2. Using codepen.io
-![Intro Codepen](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/Screenshot%202022-02-25%20202747.png)
+![Intro Codepen](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/Screenshot%202022-02-25%20202747.png)
 
 ### 3. Using VS Code
-![Intro VS Code](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20pic%201.png)
+![Intro VS Code](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20pic%201.png)
 
 
 ## HTML - Structure of a HTML Document
@@ -77,7 +77,7 @@ Lets us consider the following code :
 </body>
 </html>
 ```
-![HTML - Headings](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Headings.png)
+![HTML - Headings](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Headings.png)
 
 
 ## HTML- Adding Paragraph in a Webpage
@@ -106,7 +106,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML Paragraphs](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Paragraphs.png)
+![HTML Paragraphs](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Paragraphs.png)
 
 
 ## HTML - Adding Images in a Web Page
@@ -124,7 +124,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - Pictures 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%201.png)
+![HTML - Pictures 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Picture%201.png)
 
 - However as we can see the picture is to big.
 - We can add another attribute which is height and width.
@@ -140,12 +140,12 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - Pictures 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%202.png)
+![HTML - Pictures 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Picture%202.png)
 
 - Now let's say we have our own image in the local file in our computer.
 - In this method we are selecting offline images.
 - The picture down here shows the jpg files located in my computer.
-![Pic in File](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%203.png)
+![Pic in File](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Picture%203.png)
 ```html
 <html>
 <head>
@@ -156,7 +156,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - Pictures 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%204.png)
+![HTML - Pictures 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Picture%204.png)
 
 - Now lets us look back at *alt* tags. The *alt* tags is some sort of the description of the image that you are using.
 - It has two focus. First, if the image cannot loaded for any reason, it shows this tet to the web users.
@@ -171,7 +171,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - Pictures](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Picture%205.png)
+![HTML - Pictures](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Picture%205.png)
 
 
 ## HTML - Creating Ordered and Unordered List
@@ -203,13 +203,13 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - List 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%201.png)
+![HTML - List 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%201.png)
 
 - By default, the ordered list will be in number in increasing order.
 - However this can be change for many kind of style of ordered list.
 - Change it by adding type at the *ol*.
 - There are a lot of types for the ordered list style :
-![HTML - Ordered List Types](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%203.png)
+![HTML - Ordered List Types](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%203.png)
 
 ```html
 <html>
@@ -232,7 +232,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - List 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%202.png)
+![HTML - List 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%202.png)
 
 - For unordered list, the HTML tag is *ul*.
 - The dot bullet is the default bullet.
@@ -257,11 +257,11 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - List 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%204.png)
+![HTML - List 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%204.png)
 
 - To change the type of the bullet, we add style="" at the *ul* tag.
 - There are a lot of choices of style of the unordered list bullets.
-![Unordered List Type](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%206.png)
+![Unordered List Type](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%206.png)
 ```html
 <html>
 <head>
@@ -283,7 +283,7 @@ it will live its whole life believing that it is stupid.</p>
 </body>
 </html>
 ```
-![HTML - List 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20List%205.png)
+![HTML - List 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20List%205.png)
 
 
 
@@ -325,7 +325,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Styling 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%201.png)
+![HTML - Styling 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%201.png)
 
 - The webpage is doesnt look very good.
 - But we can make it good by adding some colours, spacing between elements and background.
@@ -339,7 +339,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ```html
 <img src="https://static.tweaktown.com/news/8/1/81145_100_heres-all-of-the-planets-in-our-solar-system-ranked_full.jpg" alt="Our Solar System" width="700" height="400" style="width:100%; height:600px;">
 ```
-![HTML - Styling 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%202.png)
+![HTML - Styling 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%202.png)
 
 - Now as we can see in the previous picture, there are some small gap or space between our edge of the screen and the image.
 - This is because HTML by default add 8 pixels margin.
@@ -348,14 +348,14 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ```html
 <body style="margin: 0;">
 ```
-![HTML - Styling 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%203.png)
+![HTML - Styling 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%203.png)
 
 - As we can see also there is no top or bottom margin on the headings.
 - So, to create or give a gap or space, we also can add _h1 style="margin-top: 60px; margin-bottom: 60px"_.
 ```html
 <h1 style="margin-top: 60px; margin-bottom: 60px">Our Solar System</h1>
 ```
-![HTML - Styling 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%204.png)
+![HTML - Styling 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%204.png)
 
 - Now let's us bring the header at the centre of the screen.
 - There's another property which is _text-allign: centre_.
@@ -363,7 +363,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ```html
 <h1 style="margin-top: 60px; margin-bottom: 60px; text-align: center; font-size: 48px">Our Solar System</h1>
 ```
-![HTML - Styling 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%205.png)
+![HTML - Styling 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%205.png)
 
 - Now let's move to the paragraph section.
 - So let's add padding on all the sides.
@@ -384,7 +384,7 @@ two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrog
 compared with hydrogen and helium, called volatiles, such as water, ammonia and methane. All eight planets have almost circular orbits that lie within a nearly flat disc called the ecliptic.
         </p>
 ```
-![HTML - Styling 6](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%206.png)
+![HTML - Styling 6](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%206.png)
 
 - Let's go to the list, we can also change the font at _ul style="margin: "_
 - This will make the font a little bit bigger.
@@ -402,7 +402,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
       <li>Pluto</li>
  </ul>
 ```
-![HTML - Styling 7](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%207.png)
+![HTML - Styling 7](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%207.png)
 
 - We can also add background colour in our webpage.
 - All we have to do is add it at the _body_.
@@ -410,7 +410,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ```html
 <body style="margin: 0; background-color: lightcoral;">
 ```
-![HTML - Styling 8](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%208.png)
+![HTML - Styling 8](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%208.png)
 
 - Similarly, if we wanted change the colour of font.
 - We will use _color:_ property.
@@ -418,7 +418,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 ```html
 <h1 style="margin-top: 60px; margin-bottom: 60px; text-align: center; font-size: 48px; color: darkorchid;">Our Solar System</h1>
 ```
-![HTML - Styling 9](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Styling%209.png)
+![HTML - Styling 9](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Styling%209.png)
 
 
 ## HTML - Block and Inline Display Values
@@ -427,8 +427,8 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 - A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
 - An inline element does not start on a new line.
 - An inline element only takes up as much width as necessary.
-![HTML Block Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Blocks).png)
-![HTML Inline Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Inline).png)
+![HTML Block Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Blocks).png)
+![HTML Inline Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20-%20Elements%20(Inline).png)
 
 - Now this is an example of block value.
 - As we can see it taking the entire available space of our screen
@@ -448,7 +448,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Block vs Inline 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%201.png)
+![HTML - Block vs Inline 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%201.png)
 
 - Below here is an example of the Inline Value
 - As we can see even coded in different lines, the words are in one line on the websites.
@@ -466,7 +466,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Block vs Inline 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%202.png)
+![HTML - Block vs Inline 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%202.png)
 
 - As we can see, we can also combine the Block and Inline together.
 - This makes the website have top bar with menu items.
@@ -485,7 +485,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Block vs Inline 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%203.png)
+![HTML - Block vs Inline 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Block%20vs%20Inline%203.png)
 
 
 ## HTML - Adding Group Styles Using Class Attributes
@@ -521,7 +521,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Group Styling 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%201.png)
+![HTML - Group Styling 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Group%20Styling%201.png)
 
 - As we can see above, there are two planets with some description. Let's us modify the website a little bit.
 - To modify it a little bit we have to add style at each of the attribute.
@@ -558,7 +558,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Group Styling 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%202.png)
+![HTML - Group Styling 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Group%20Styling%202.png)
 
 - However, the problem is that when I wanted to change style, I have to put styling in each elements.
 - Luckily as in this code above, we only have 2 elements which is Mercury and Venus.
@@ -609,7 +609,7 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 </body>
 </html>
 ```
-![HTML - Group Styling 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML%20Language/Media/Notes%20Pic/HTML%20Group%20Styling%203.png)
+![HTML - Group Styling 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Group%20Styling%203.png)
 
 
 ## HTML - Adding Hyperlinks in a Webpage
