@@ -1,39 +1,20 @@
 <html>
 <head>
-        <title>Adding Group Styles Using Class Attributes</title>
+        <title>HTML - Using Links to Connect Webpage</title>
 
         <style>
-                .planet-image{
-                        height: 350px; 
-                        width: 550px;
-                }
-                .planet-desc{
-                        font-size: 24px; 
-                        line-height: 1.5;
+                .menu-item{
+                        display: inline;
+                        padding: 12px 16px;
+                        background-color: lightblue;
                 }
         </style>
 </head>
 <body>
-        <div>
-                <img class="planet-image" src="https://cdn.mos.cms.futurecdn.net/xLXT69hv4k2U5pfKLBCanC-970-80.jpg" alt="Mercury">
-                <p class="planet-desc" style="font-size: 24px; line-height: 1.5">
-                        Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's 
-                        moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury 
-                        experiences dramatic changes in its day and night temperatures: Mercury temperatures can reach a scorching 
-                        840 F (450 C) in the day, which is hot enough to melt lead. Meanwhile, on the night side, temperatures drop 
-                        to minus 290 F (minus 180 C). 
-                </p>
-        </div>
-
-        <div>
-                <img class="planet-image" src="https://cdn.mos.cms.futurecdn.net/oFF43BjXYUyyMTTJLFpeDE-970-80.jpg" alt="Venus">
-                <p class="planet-desc">
-                        The second planet from the sun, Venus is Earth's twin in size. Radar images beneath its atmosphere reveal 
-                        that its surface has various mountains and volcanoes. But beyond that, the two planets couldn't be more 
-                        different. Because of its thick, toxic atmosphere that's made of sulfuric acid clouds, Venus is an extreme 
-                        example of the greenhouse effect. It's scorching-hot, even though Mercury is closer to the sun, Venus is 
-                        the hottest planet in the solar system. 
-                </p>
-        </div>
+      <ul style="list-style-type: none">
+        <li class="menu-item"><a href="https://www.onlinepianist.com/" target="_blank">Home</a></li>
+        <li class="menu-item"><a href="https://www.onlinepianist.com/virtual-piano" target="_blank">Keyboard</a></li>
+        <li class="menu-item"><a href="https://www.onlinepianist.com/contact" target="_blank">Contact</a></li>
+      </ul>  
 </body>
 </html>
