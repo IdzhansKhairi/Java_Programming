@@ -703,7 +703,130 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 
 
 ## HTML - Uniquely Identify HTML Elements by Using ID Attribute
+- We will learn on how to uniquely identify a HTML element.
+- HTML provides us with an attribute called ID for this purpose.
+- You can give ID to give stylings to an element or to bookmark elements.
+- In _style_ tag, for classes we use "." and a **class name** but in ID we use "#" and an **ID**.
+- ID is also good if we wanted to make the elements in the webpage have some similar elements but different in some elements.
+- For example here, we wanted to make the sections have same height and width (using classes) but different colour in each section (using ID).
+```html
+<html>
+<head>
+        <title>HTML - Uniquely Identify HTML Elements by using ID attribute</title>
 
+        <style>
+                .menu-item{
+                        display: inline;
+                        padding: 12px 16px;
+                        background-color: lightblue;
+                }
+                .section{
+                        width: 100%;
+                        height: 550px;
+                }
+                #topbar{
+                        list-style-type: none; 
+                        background-color: lightpink; 
+                        padding: 16px
+                }
+                #first-section{
+                        background-color: lightgreen; 
+                }
+                #second-section{
+                        background-color: lightblue;
+                }
+                #third-section{
+                        background-color: lightpink;
+                }
+        </style>
+</head>
+<body style="margin: 0;">
+
+      <ul id="topbar">
+        <li class="menu-item"><a href="/HTML_Language/index.html">Home</a></li>
+        <li class="menu-item"><a href="/HTML_Language/index.html">About</a></li>
+        <li class="menu-item"><a href="/HTML_Language/index.html">Contact</a></li>
+      </ul>
+      
+      <div id="first-section" class="section">
+              <h1 class="section-heading">Landing Section</h1>
+      </div>
+
+      <div id="second-section" class="section">
+              <h1 class="section-heading">About Section</h1>
+      </div>
+
+      <div id="third-section" class="section">
+              <h1 class="section-heading">Contact Section</h1>
+      </div>
+
+</body>
+</html>
+```
+![HTML - ID 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20ID%201.png)
+
+- For second application we can use this ID to bookmark elements.
+- Here we got three items which is **Landing Section**, **About Section** and **Contact Section**.
+- All of this sections when we clicked, will always end up in the same webpage and tab.
+- To bookmark these items, you can put "#" and the name of the id after the URL in _a_ tags.
+- When we click on the hyperlinks, it will redirect us in the same webpage, same tab but at different section.
+- For example, if I clicked Contact, it will redirect use to contact section.
+```html
+<html>
+<head>
+        <title>HTML - Uniquely Identify HTML Elements by using ID attribute</title>
+
+        <style>
+                .menu-item{
+                        display: inline;
+                        padding: 12px 16px;
+                        background-color: lightblue;
+                }
+                .section{
+                        width: 100%;
+                        height: 550px;
+                }
+                #topbar{
+                        list-style-type: none; 
+                        background-color: lightpink; 
+                        padding: 16px
+                }
+                #first-section{
+                        background-color: lightgreen; 
+                }
+                #second-section{
+                        background-color: lightblue;
+                }
+                #third-section{
+                        background-color: lightpink;
+                }
+        </style>
+</head>
+<body style="margin: 0;">
+
+      <ul id="topbar">
+        <li class="menu-item"><a href="/HTML_Language/index.html#first-section">Home</a></li>
+        <li class="menu-item"><a href="/HTML_Language/index.html#second-section">About</a></li>
+        <li class="menu-item"><a href="/HTML_Language/index.html#third-section">Contact</a></li>
+      </ul>
+      
+      <div id="first-section" class="section">
+              <h1 class="section-heading">Landing Section</h1>
+      </div>
+
+      <div id="second-section" class="section">
+              <h1 class="section-heading">About Section</h1>
+      </div>
+
+      <div id="third-section" class="section">
+              <h1 class="section-heading">Contact Section</h1>
+      </div>
+
+</body>
+</html>
+```
+![HTML ID 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20ID%202.png)
+![HTML ID 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20ID%203.png)
 
 
 
