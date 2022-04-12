@@ -117,12 +117,14 @@ void CurrentBalance(double money)
     int printReceipt;
     cout << "\n\tYour current balance: RM " << money;
 
+    // Prompting the user if they wanted to print the receipt or not.
     cout << "\n\tDo you want to print a receipt? (Yes=1 // No=0): ";
     cin >> printReceipt;
 
     if(printReceipt == 1)
     {
         // Create and open a text file
+        // You may change the location for your txt file to be.
         ofstream receipt("C:/Users/Idzhans Khairi/Documents/VSCode/Programming_Notes/C++_Language/receipt.txt");
 
         receipt << "\n\t-------------------";
