@@ -82,3 +82,39 @@ rectangle.setRotate(45); // Setting up the rotation of the rectangle to 45 degre
 
 root.getChilren().add(rectangle);
 ```
+
+Adding triangle in the application pane :
+```java
+Polygon triangle = new Polygon();
+
+triangle.getPoints().setAll(
+        200.0, 200.0,
+        300.0, 300.0,
+        200.0, 300.0); // Setting up the triangle by inserting the coordinate
+triangle.setFill(Color.YELLOW); // Fill the colour of the triangle as yellow
+
+root.getChildren().add(triangle);
+```
+
+Adding Circle in the application pane :
+```java
+Circle circle = new Circle();
+
+circle.setCenterX(350); // Setting up the center of the circle at the x-axis
+circle.setCenterY(350); // Setting up the center of the circle at the y-axis
+circle.setRadius(50); // Setting up the radius of the circle from the center
+circle.setFill(Color.ORANGE); // Setting up the color of the circle
+
+root.getChildren().add(circle);
+```
+
+Adding images in the application pane :
+```java
+Image image = new Image("Logo UM.jpg");
+ImageView imageView = new ImageView(image);
+
+imageView.setX(400); // Setting up the position of image at x-axis
+imageView.setY(400); // Setting up the position of image at Y-axis
+
+root.getChildren().add(imageView);
+```
