@@ -118,3 +118,6 @@ imageView.setY(400); // Setting up the position of image at Y-axis
 
 root.getChildren().add(imageView);
 ```
+
+## Event Handling using SceneBuilder
+
