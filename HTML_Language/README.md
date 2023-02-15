@@ -832,7 +832,169 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 
 
 
+# **3. New Features iin HTML5**
+## HTML - What makes HTML5 Better?
+### 1. Introduce Semantic Elements
+- These elements proviid meaniing to both the broser and search engiines like Google and Bing.
+![HTML Better 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/HTML%20Better%201.png)
+- If we see these HTML page layout, in HTML4, everything is at div.
+- The browsers and search engnes wouldn't get any informatioon about the type of dataa from these structural elements.
+- But on the right hand side, the HTML5, the browsers wiil know which part of the web is the header or navvigation menu or etc.
+
+### 2. It has inbuilt suppoort for audiio and video files
+- HTML4 has no support for audio and video files.
+- You can embed different audiio and video from file formats in HTML5.
+
+### 3. It has an inbuilt support for vector graphics like SVG and Canvas
+- HTML4 has no inbuilt support for vector graphics.
+- But these can be supported with the help of Adobe, Flash, Silverlight etc.
+
+### 4. It supports multiple storage options
+- Such as Application Cach, SQL Database and Web Storage.
+- HTML4 just provvidee cookiees for application data storage.
+- _Cookies_ are small pieces of text seent to your browser by a website you visit.
+- They help that website remember information about your visit, which can both make it easier to visit the site again and make the site more useful to you.
+
+### 5. It has JS Web worker API
+- Allow Javascript and browser interface to run on different threads.
+- For HTML4, browser interfacee and Javascript runs on same thread leading to performance issues.
 
 
 
+## HTML - New Elements & Attributes in HTML5
+![New Element 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/New%20Element%201.png)
+![New Element 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/New%20Element%202.png)
+![New Element 3](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/New%20Element%203.png)
+![New Element 4](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/New%20Element%204.png)
+![New Element 5](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/New%20Element%205.png)
+
+
+
+## HTML - Design Page Structure Using Semantic Elements
+### Structural Elements
+- These elements just define the structure of HTML page.
+- They don't proide the browsers & search engines (like Google and Bing), what kinda of data is being rendered by the HTML page.
+- For example _div_, _span_ etc.
+
+### Sementic Elements
+- These elements define the structure as well as give meaning to the content of HTML page.
+- They help the browsers & search engines (like Google and Bing) to understand the kind of data being rendered like which part is for navigation, which part is the main conntent,, which part is the footer etc.
+- For example _header_, _nav_, _main_, etc.
+
+```html
+<html>
+<head>
+        <title>Sementic Elements</title>
+
+        <style>
+                #header {
+                        background-color: lightblue;
+                        padding: 24px;
+                }
+                #navbar {
+                        background-color: lightcoral;
+                        padding: 8px;
+                }
+                #main-section {
+                        background-color: lightgrey;
+                        padding: 24px;
+                }
+                #section{
+                        background-color: lightgreen;
+                        padding: 16px;
+                }
+                .article {
+                        background-color: lightseagreen;
+                        padding: 16px;
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                }
+                #footer{
+                        background-color: lightskyblue;
+                        padding: 24px;
+                }
+        </style>
+</head>
+<body style="margin: 0">
+        <header id="header">
+                <nav id="navbar">
+                        <span>Menu 1</span>
+                        <span>Menu 2</span>
+                        <span>Menu 3</span>
+                </nav>
+        </header>
+
+        <main id="main-section">
+                <section id="section">
+                        <article class="article">
+                                <header>
+                                        <h3>Article Title 1</h3>
+                                        <a href="/">Author 1</a>
+                                </header>
+                                <p>Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor </p>
+                        </article>
+
+                        <article class="article">
+                                <header>
+                                        <h3>Article Title 2</h3>
+                                        <a href="/">Author 2</a>
+                                </header>
+                                <p>Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor Lorem Imsum Dolor </p>
+                        </article>
+                </section>
+        </main>
+
+        <footer id="footer">
+                <p>Copyright 2023</p>
+        </footer>
+</body>
+</html>
+```
+![Sementic Elements Interface](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/Semantic%20Elements%20Interface.png)
+
+
+
+## HTML - New Semantic Elements: _details_ and _summary_
+- Learn about _detail_ and _summary__ tags.
+- The _detail_ tag can be used to create an interactive widget that the user can open and close by clicking on it.
+- The content of a detailed element is hidden by default.
+- Only the summary visible.
+- The _summary_ tag
+
+```html
+<html>
+<head>
+        <title>Semantic Tags - Details and Summary</title>
+
+</head>
+<body>
+        <details>
+                <summary>Chapter 1</summary>
+                <p>This is an introductory chapter</p>
+        </details>
+
+        <details>
+                <summary>Chapter 2</summary>
+                <ul>
+
+                        <li>Heading</li>
+                        <li>Paragraph</li>
+                        <li>Links</li>
+                </ul>>
+        </details>
+
+        <details>
+                <summary>Chapter 3</summary>
+                <a href="https://www.youtube.com/">YouTube</a>
+        </details>
+        
+        <details>
+                <summary>Chapter 4</summary>
+                <p>This is an ending chapter</p>
+        </details>
+</body>
+</html>
+```
+![Semantic Elements 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/Semantic%20Elements%201.png)
+![Semantic Elements 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/HTML_Language/Media/Notes%20Pic/Semantic%20Elements%202.png)
 
