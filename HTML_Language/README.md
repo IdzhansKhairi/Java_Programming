@@ -959,7 +959,8 @@ compared with hydrogen and helium, called volatiles, such as water, ammonia and 
 - The _detail_ tag can be used to create an interactive widget that the user can open and close by clicking on it.
 - The content of a detailed element is hidden by default.
 - Only the summary visible.
-- The _summary_ tag
+- The _summary_ tag defines visible heading for the _detail_.
+- An user can click on the _summary_ to show more content
 
 ```html
 <html>
