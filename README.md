@@ -4,3 +4,4 @@
 - Java
 - Python
 - HTML
+- JavaScript
