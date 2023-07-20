@@ -611,21 +611,501 @@ console.log(typeof(Boolean(''))) // Output: "boolean"
 
 ## Section 6: Objects and Arrays
 ### 17. JavaScript - Objects
+- What if our data is more complex such as list of scores in an exam.
+- An object is a collection of key-value pair and closed in a curly bracket.
+- Could be primitive data type, object or a function.
 
+```javascript
+console.clear()
+
+var mCars= {
+  "p1" : "35 kmph",
+  "gallardo" : "320 kmph",
+  "veyron" : "409 kmph",
+  "agera" : "429 kmph"
+}
+console.log(mCars) // It will printed the objects
+console.log(typeof(mCars)) // Output: "Object"
+
+var mAgera = {
+  name: " Agera",
+  manufacturer: {
+    name: "Koenigsegg"
+    location: "Sweden"
+  },
+  topSpeed: 429,
+  color: "Black"
+  spoilers: false
+  applyBrakes: function() {
+    setTimeOut(function() {
+      console.log('Car Stopped');
+  }, 5000)
+}
+console.log(mAgera.name) // Output: "Agera"
+console.log(mAgera.topSpeed) // Output: 429
+console.log(mAgera.manufacturer) // Output: (it will print the object of manufacturer)
+console.log(mAgera.manufacturer.name) // Output: "Koenigsegg"
+console.log(mAgera.applyBrakes)) // Output: undefined, "Car Stopped"
+console.log(mAgera.applyBrakes) // Output: (print all the function), "Car Stopped"
+```
 
 ### 18. JavaScript - Arrays Part 1
+- Arrays is special types of object that stores a list of data.
+- Regular ojects use keys to access data.
+- Arrays use position to access data.
+- **_push_** will add at the back of the array.
+- **_pop_** will remove the last value in the array
+```javascript
+console.clear()
 
+var mFriend = ['Shaw', 'Clara', 'Vab', 'Kun', 'Jacob', 'Dina']
+console.log(mFriend) // Output: ["Shaw", "Clara", "Vab", "Kun", "Jacob", "Dina"]
+console.log(typeof(mFriends)) // Output: "Object"
+console.log(mFriends[2]) // Output: "Vab"
+console.log(mFirends[0]) // Output: "Shaw"
+console.log(mFriends[4]) // Output: "Jacob"
+
+// Update a value
+mFriends[0] = 'Shawn'
+console.log(mFriends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina"]
+
+// Add more items
+mFriends[6] = 'Alan'
+console.log(mFirends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina", "Alan"]
+
+mFriends[10] = 'Tiffany'
+console.log(mFriends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina", "Alan", undefined, undefined, undefined, "Tiffany"]
+
+mFriends[mFriends.length] = 'Rob'
+console.log(mFriends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina", "Alan", undefined, undefined, undefined, "Tiffany", "Rob"]
+
+// After we remove the undefined
+mFriends.push('Jack')
+console.log(mFriends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina", "Alan", "Rob", "Jack"]
+
+// Delete a value
+var mName = mFriends.pop()
+console.log(mName) // Output "JacK"
+console.log(mFriends) // Output: ["Shawn", "Clara", "Vab", "Kun", "Jacob", "Dina", "Alan", "Rob"]
+```
 
 ### 19. JavaScript - Arrays Part 2
+
+```javascript
+var mFriend = ['Shaw', 'Clara', 'Vab', 'Kun', 'Jacob', 'Dina']
+console.log(mFriend) // Output: ["Shaw", "Clara", "Vab", "Kun", "Jacob", "Dina"]
+
+// 1st tells where to start
+// 2nd tells how many items to be deleted.
+// 3rd and 4th and so on tels what items to be added.
+mFriends.splice(3, 0, 'Donna', 'Rachel)
+console.log(mFriends) // Output: ["Shaw", "Clara", "Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina"]
+
+mFriends.splice(0, 0, 'Harvey')
+console.log(mFriends) // Output: ["Harvey", "Shaw", "Clara", "Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina"]
+
+//Delete item at specifcic position
+mFriends.splice(2, 1)
+console.log(mFriends) // Output: ["Harvey", "Shaw", "Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina"]
+
+mFriends.splice(0, 2)
+console.log(mFriends) // Output: ["Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina"]
+
+// Concatenation
+var mOfficeFriends = ['Nina', 'Aron', 'Katie', 'Vic', 'Paula']
+var mAllFriends = mFriends.concat(mOfficeFriends)
+
+console.log(mFriends) // Output: ["Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina"]
+console.log(mOfficeFriends) // Output: ["Nina", "Aron", "Katie", "Vic", "Paula"]
+console.log(mAllFriends) // Output: ["Vab", "Donna", "Rachel", "Kun", "Jacob", "Dina", "Nina", "Aron", "Katie", "Vic", "Paula"]
+
+// Sorting Ascending and Descending
+mAllFriends.sort() // Sort the Array in ascending order
+console.log(mAllFriends) // Output: ["Aron", "Dina", "Donna", "Jacob", "Katie", "Kun", "Nina", "Paula", "Rachel", "Vab", "Vic"]
+
+mAllFriends.revers() // Sort in descending order
+console.log(mAllFriends) // Output: ["Vic", "Vab", "Rachel", "Paula", "Nina", "Kun", "Katie", "Jacob", "Donna", "Dina", "Aron"]
+```
 
 
 ## Section 7: Loops
 ### 20. JavaScript - Introduction to Loops
+- The repetition of code is called _Loop_.
+- Each repetition is called _Iteraation_
+- It will running the same line of codes for a certain number of times is called loop.
+- Javascript offers 2 loop : While Loop and For Loop
+- When you know, how many times your loop needs to iterate then you can use _For Loop_
+- When you have the kind of loop where you need to stop the loop based on certain condition, you can use _While Loop_
 
 ### 21. JavaScript - While Loop
+- Iterates a block of codes until a specific condition met to stop the loop.
 
+```javascript
+console.clear()
+
+var mValue = 0
+while(mValue <= 50) {
+  mValue++
+}
+console.log(mValue) // Output: 51
+```
 
 ### 22. JavaScript - For Loops
+- Iterates block of codes for a specific number of times.
+- _break_ keyword will exit the loop
+- _continue_ starts the next iteration without continue any further.
+
+```javascript
+console.clear()
+
+var mList = [1, 2, 3, 4, 5]
+var pos;
+
+for (pos = 0; pos < mList.length; pos++) {
+  console.log('Posiion => ' + pos + ' Value => ' + mList[pos])
+}
+// Output:
+// "Position => 0 Value => 1"
+// "Position => 1 Value => 2"
+// "Position => 2 Value => 3"
+// "Position => 3 Value => 4"
+// "Position => 4 Value => 5"
+
+// Break keyword
+for (pos = 0; pos < mList.length; pos++) {
+  if(pos >= 3) {
+    break
+  }
+  console.log('Posiion => ' + pos + ' Value => ' + mList[pos])
+}
+// Output:
+// "Position => 0 Value => 1"
+// "Position => 1 Value => 2"
+// "Position => 2 Value => 3"
+
+// Continue keyword (Print value at even value)
+for (pos = 0; pos < mList.length; pos++) {
+  if(pos % 2 !== 0) {
+    continue
+  }
+  console.log('Posiion => ' + pos + ' Value => ' + mList[pos])
+}
+// Output:
+// "Position => 0 Value => 1"
+// "Position => 2 Value => 3"
+// "Position => 4 Value => 5"
+
+// Continue keyword (Print value at odd value)
+for (pos = 0; pos < mList.length; pos++) {
+  if(pos % 2 === 0) {
+    continue
+  }
+  console.log('Posiion => ' + pos + ' Value => ' + mList[pos])
+}
+// Output:
+// "Position => 1 Value => 2"
+// "Position => 3 Value => 4"
+```
+
+
+## Section 8: Functions and Hoisting
+### 23. JavaScript - Functions
+- function functionName (param1, param2, ......, paramN) { // block of code }
+
+```javascript
+console.clear()
+
+// Function to print sums of two numbers
+function mSum() {
+  var num1 = 10;
+  var num2 = 20;
+  var sum = num1 + num2;
+  console.log(sum)
+}
+mSum() // Output: 30
+
+// --------------------------------------------------------------------------------------
+
+function mSum() {
+  var num1 = 10;
+  var num2 = 20;
+  var sum = num1 + num2;
+
+  return sum
+}
+console.log(mSum()) // Output: 30
+
+// --------------------------------------------------------------------------------------
+
+function mSum() {
+  var num1 = 10;
+  var num2 = 20;
+  var sum = num1 + num2;
+
+  console.log('Im a print statement'
+}
+console.log(mSum()) // Output: "I'm a print statement", undefined
+// Undefined because nothing is returned.
+
+// --------------------------------------------------------------------------------------
+
+function mSum() {
+  var num1 = 40;
+  var num2 = 20;
+  var sum = num1 + num2;
+
+  return sum
+  console.log('Im a print statement')
+}
+var totalSum = 100 + mSum()
+console.log(totalSum); // Output: 160
+```
+
+### 24. JavaScript - Function Arguments
+- How to pass values in our function.
+- These values are called function arguments
+
+```javascript
+console.clear()
+
+function greetings() {
+  console.log('Welcome');
+}
+greetings() // Output: "Welcome"
+
+// --------------------------------------------------------------------------------------
+
+function greetings(personName) {
+  console.log('Welcome '+ personName);
+}
+greetings() // Output: "Welcome undefined"
+
+// --------------------------------------------------------------------------------------
+
+function greetings(personName) {
+  console.log('Welcome '+ personName);
+}
+greetings('Qaifi) // Output: "Welcome Qaifi"
+greetings('Nate') // Output: "Welcome Nate"
+greetings('Vijay') // Output: "Welcome Vijay"
+
+// --------------------------------------------------------------------------------------
+
+function totalSum(num1, num2) {
+  console.log('num1 => ' + num1);
+  console.log('num2 => ' + num2);
+  console.log(num1 + num2)
+}
+totalSum(); // Output: "num1 => undefined", "num2 => undefined", NaN
+
+// --------------------------------------------------------------------------------------
+
+function totalSum(num1, num2) {
+  console.log(num1 + num2)
+}
+totalSum(2, 7); // Output: 9
+totalSum(22, 38) // Output: 60
+
+// --------------------------------------------------------------------------------------
+
+function totalSum(num1, num2, num3) {
+  console.log(num1 + num2)
+}
+totalSum(2, 7); // Output: 9
+totalSum(22, 38) // Output: 60 (num3 => undefined)
+
+// --------------------------------------------------------------------------------------
+
+function totalSum(num1, num2, num3) {
+  console.log('num1 => ' + num1);
+  console.log('num2 => ' + num2);
+  console.log('num2 => ' + num3);
+  console.log(num1 + num2 + num3)
+}
+totalSum(22, 38, 33. 50, 3, 40, 58); // Output: "num1 => 22", "num2 => 38, "num3 => 33", 93
+// Even though we passed many parameters than it should be, JavaScript only acknowledge the values.
+// But if we give less, it will print NaN
+```
+
+### 25. JavaScript - Scope and Environment
+- Very important as aske in many interviews.
+- **Scope:** The part of the program where a variable or a funtion is visible/accessible.
+- **Variable:** Outside all the functions and locks are available throghout the code. This are called _Global Variables_.
+- Consider the code below:
+```javascript
+var num1 = 10; //num1 is a Global Variable
+function sum(num2) {
+  var total = num1 + num2; // total is a local variable
+  console.log(total); // Local Scope of num1
+}
+console.log(num1)
+// Global Scope of num1
+```
+- More examples:
+```javascript
+console.clear();
+
+var num1 = 10 // Global Variable - It can be accessed anywhere, outside and inside of the function
+
+function sum(num2) {
+  var total;
+  console.log(num1 + num2); // num2 is the Local Variable as it is only can be accessed only inside this function.
+}
+
+console.log(total) // This will give an error as we cannot access the variable inside the function
+sum(20) // Output: 30
+sum(5)  // Output: 60
+```
+
+### 26. JavaScript - Variable Hosting
+- Mechanism where variables and functions can be used before declaring them is called Hoisting in JavaScript.
+- In terms of code execution, the variables and function declarations are moved to the top of their scope before code execution.
+- Javascript has two steps in executing a particular script:
+```
+Step 1: Creation - Analyze all the code and allocate the memory space for variable and functions
+Step 2: Execution 
+```
+```javascript
+// Actual Code
+x = "some-string";
+console.log(x);
+var x;
+
+// Hoisting Effect - What it did behind the scene
+var  = undefined; // Since it is not declared yet before, it moves the variable to the top and declare it as undefined first
+x = "some-string";
+console.log(x);
+```
+
+```javascript
+num1 = 10;
+console.log(num1) // Output: 10
+var num1;
+console.log(num1) // Output: 10
+
+str1 = "Demo String"
+console.log(str1); // Output: "Demo String"
+var str1;
+console.log(str1); // Output: "Demo String"
+```
+
+### 27. JavaScript - Function Hoisting
+- Just some tips. It is a bad habit to use a variable before declaring them.
+- This is not a feature, but this is how a JavaScript works.
+- Without bad habits, we can prevent silent errors and unexpected behavior.
+
+```javascript
+console.clear()
+
+// Function can be used before the declaration of the function
+sum(5, 10); //  Output: 15 
+sum(30, 22); // Output: 52
+
+function sum(num1, num2) {
+  console.log(num1 + num2)
+}
+
+sum(90, 8) // Output: 98
+
+// --------------------------------------------------------------------------------------
+
+sum(5, 10); //  Output: "error"
+sum(30, 22); // Output: "error"
+
+var sum = function(num1, num2) {
+  console.log(num1 + num2)
+}
+
+sum(90, 8) // Output: 98 (no error)
+
+// --------------------------------------------------------------------------------------
+
+var total = 10;
+var sum = function(num1, num2) {
+  console.log(total);
+  total = num1 + num2;
+  var total;
+  console.log(total);
+}
+sum(90, 8)
+// Output: undefined, 98, undefined, 108
+// The first output is undefined as when it enters the function, JavaScript will initialize "total" as undefined first. So when we printed "total" for the first time, the output would be undefined.
+// If we didn't initialize the "total" inside the function, the output would produce the initial value of the total first before the second one.
+```
+
+
+## Section 9: Document Object Model (DOM)
+### 28. JavaScript - Introduction to DOM
+- When a web page is loaded, the browser creates a Document Object model of the page.
+- It is the tree representation of the HTML document. This DOM tree can be modified with the help of JavaScript.
+- DOM is the Object Oriented representation of the webpage.
+- JavaScript can add new HTML elements and attributes.
+- JavaScript can change any HTML elements and attributes on the page.
+- JavaScript can change all the CSS styles on the page.
+- JavaScript can remove existing HTML elements and attributes.
+- JavaScript can add and listen to HTML events like onClick, onScroll etc.
+- Assume below HTML and JavaScript code
+
+```
+<!--HTML File-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Testing Coding LMAO</title>
+
+  <script type="text/javascript" src="/script.js">
+  </script>
+
+  <script>console.log('This is JavaScript');</script>
+</head>
+
+<body style="background-color: lightblue" ;>
+
+  <h1>Hello world</h1>
+
+</body>
+
+</html>
+```
+```javascript
+// JavaScript File
+
+console.log('Script Loaded')
+```
+- If we inspect the website at the console, we can see that the text "Script Loaded" and "This is JavaScript" is being printed in the console.
+- You can edit the JavaScript as what you have learned so far.
+
+### 29. JavaScript - Select HTML Elements
+- Provide us with a DOM method called getElementById).
+```
+getElementById('html-element-id')
+// getElementById is a DOM method. It accepts the HTML element Id and returns the HTML element matching that id. For example: document.getElementById('topbar').
+// For the string inside the method, you need to pass the ID of the element as the argument. If no element matches the id, then it returns null.
+```
+
+### 30. JavaScript - Query Selectors
+### 31. JavaScript - Update HTML Elements
+### 32. JavaScript - Updating Styles
+### 33. JavaScript - Intro to Events
+### 34. JavaScript - Add and Remove Classes from HTML Elements
+### 35. JavaScript - Getting Styles
+### 36. JavaScript - Form Events
+### 37. JavaScript - Keyboard Events
+### 38. JavaScript - Mouse Events
+### 39. JavaScript - Create HTML Elements - Part 1
+### 40. JavaScript - Create HTML Elements - Part 2
+### 41. JavaScript - Update and Delete HTML Elements
+
+
+## Section 10: Browser Object Model
+### 42. JavaScript - Introduction to Browser Object Model
+### 43. JavaScript - Screen and Navigator Object
+### 44. JavaScript - History and Location Object
+
 
 
 
