@@ -928,9 +928,9 @@ totalSum(22, 38, 33. 50, 3, 40, 58); // Output: "num1 => 22", "num2 => 38, "num3
 ```
 
 ### 25. JavaScript - Scope and Environment
-- Very important as aske in many interviews.
-- **Scope:** The part of the program where a variable or a funtion is visible/accessible.
-- **Variable:** Outside all the functions and locks are available throghout the code. This are called _Global Variables_.
+- Very important as asked in many interviews.
+- **Scope:** The part of the program where a variable or a function is visible/accessible.
+- **Variable:** Outside all the functions and locks are available throughout the code. These are called _Global Variables_.
 - Consider the code below:
 ```javascript
 var num1 = 10; //num1 is a Global Variable
@@ -962,7 +962,7 @@ sum(5)  // Output: 60
 - In terms of code execution, the variables and function declarations are moved to the top of their scope before code execution.
 - Javascript has two steps in executing a particular script:
 ```
-Step 1: Creation - Analyze all the code and allocate the memory space for variable and functions
+Step 1: Creation - Analyze all the code and allocate the memory space for variables and functions
 Step 2: Execution 
 ```
 ```javascript
@@ -1080,15 +1080,348 @@ console.log('Script Loaded')
 - You can edit the JavaScript as what you have learned so far.
 
 ### 29. JavaScript - Select HTML Elements
-- Provide us with a DOM method called getElementById).
-```
+```javascript
 getElementById('html-element-id')
 // getElementById is a DOM method. It accepts the HTML element Id and returns the HTML element matching that id. For example: document.getElementById('topbar').
 // For the string inside the method, you need to pass the ID of the element as the argument. If no element matches the id, then it returns null.
 ```
+```javascript
+getElementByClassName('html-class-string')
+// getElementsByClassName is a DDOM method. It accepts the HTML class string and returns all the HTML elements matching that class. For example: document.getElementsByClassName('menu')
+// For the string inside the method, you need to pass the class string of the elements as an argument. If no elements matches the class then it returns an empty array.
+```
+```javascript
+getElementsByTagName('html-tag-string')
+// getElementsByTagName is a DOM method. It accepts the HTML tag string and returns all the HTML elements matching that tag. For example: document.getElementsByTagName('h3')
+// For the string inside the method, you need to pass the tag name string as an argument. If no elements match the tag name then it returns an empty array.
+```
+- Assume the following HTML and JavaScript
+- After you run and deploy the web application, when you click inspect and check at the console, you can see the output is being shown.
+- You may see all the properties inside the particular tagged or choosen element id, or class or tags.
+```html
+</head>
+
+<body>
+  <header id="topbar">
+    <nav>
+      <span id="logo">EDYODA</span>
+      <span class="menu-item">Flashbytes</span>
+      <span class="menu-item">Categories</span>
+      <span class="menu-item">Upload Video</span>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article class="blog-card">
+        <img class="blog-image"
+          src="https://edyoda.s3.amazonaws.com/media/blog-images/WhatsApp_Image_2019-06-19_at_17.55.10.jpeg"
+          alt="Blog Image" />
+        <h3 class="blog-heading">Learn these programming languages in 2019</h3>
+        <p class="blog-desc">Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum
+          Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor.</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="/script.js">
+  </script>
+</body>
+
+</html>
+```
+```javascript
+console.log('Script Loaded');
+
+// getElementById()
+console.log(document.getElementById("topbar"));
+
+// getElementByClassName
+console.log(document.getElementsByClassName('blog-card'));
+
+// getElementsByTagName
+console.log(document.getElementsByTagName('img'))
+```
+![Select HTML Elements](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/JavaScript_Language/Media/Select%20HTML%20Elements.PNG)
 
 ### 30. JavaScript - Query Selectors
+- Query Selectors allow you to use CSS selectors to select HTML elements.
+- It is the new way in JavaScript to select HTML elements.
+- There are 2 such selectors: querySelector(), querySelectorAll()
+- It select the first item that it finds.
+- Query selector is new, it is not supported with internet explorer 7 and below.
+- If user use these, it will use getElementById() and etc. If use Query Selector will get error.
+- getElementById twice faster than Query Selector. But if you wanted to select multiple id, the use query selector.
+
+```javascript
+querySelector('css-selector-string')
+// Is a DOM method. It accepts the CSS Selector string and returns only the first HTML element matching the query. For example: document.querySelector('#topbar span')
+// You need to pass the CSS selector string as an argument. If no elements match the selector string then it returns null.
+```
+```javascript
+querySelectorAll('css-selector-string')
+// Is a DOM method. It accepts the CSS Selector string and returns all the HTML elements matching the query. For example: document.querySelectorAll('#topbar span')
+// You need to pass the CSS selector string as an argument. If no elements match the selector string then it returns an empty array.
+```
+- Assume the below HTML, CSS and JavaScript.
+- The output will be shown at the console after inspected.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>JS - Query Selector</title>
+</head>
+
+<body>
+  <header id="topbar">
+    <nav>
+      <span id="logo">EDYODA</span>
+      <span class="menu-item">Flashbytes</span>
+      <span class="menu-item">Categories</span>
+      <span class="menu-item">Upload Video</span>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article class="blog-card">
+        <img class="blog-image"
+          src="https://edyoda.s3.amazonaws.com/media/blog-images/WhatsApp_Image_2019-06-19_at_17.55.10.jpeg"
+          alt="Blog Image" />
+        <h3 class="blog-heading">Learn these programming languages in 2019</h3>
+        <p class="blog-desc">Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum
+          Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor.</p>
+      </article>
+      <article class="blog-card">
+        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn-artificial-intelligence.jpeg"
+          alt="Blog Image" />
+        <h3>Get Started with Artificial Intelligence</h3>
+        <p class="blog-desc">Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum
+          Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor.</p>
+      </article>
+      <article class="blog-card">
+        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/data-mining-an-overview.jpg" alt="Blog Image" />
+        <h3>Data Mining: A Detailed Study in 2019</h3>
+        <p class="blog-desc">Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum
+          Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor. Lorem Ipsum Dolor.</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="/script.js">
+  </script>
+</body>
+
+</html>
+```
+```css
+body {
+    margin: 0;
+    background-color: #f2f6ff;
+}
+
+#topbar {
+    height: 36px;
+    padding: 12px 80px;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#logo {
+    color: #0086ff;
+    font-size: 32px;
+    letter-spacing: -1px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 48px;
+}
+
+.menu-item {
+    margin: 0;
+    margin-right: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    position: relative;
+    top: -4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+main {
+    padding: 4% 12%;
+    box-sizing: border-box;
+}
+
+.blog-card {
+    width: 32%;
+    height: 390px;
+    vertical-align: top;
+    margin-right: 1%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #aaa;
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    box-shadow: 0 5px 10px #aaa;
+}
+
+.blog-card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.blog-card h3 {
+    margin: 16px 16px 12px;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-card p {
+    margin: 12px 16px 16px;
+    font-style: 'Raleway', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    /* word-break: break-all; */
+    word-wrap: break-word;
+}
+
+@media (max-width: 990px) {
+    .blog-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-card {
+        width: 100%;
+    }
+}
+```
+```javascript
+console.log('Script Loaded');
+
+// It will select all of the items that match with the img
+console.log(document.querySelectorAll('.blog-card img'))
+
+// It will select the first item that match to the img
+console.log(document.querySelector('.blog-card img'))
+
+// To select a specific item such as header with the id "topbar"
+console.log(document.querySelectorAll('#topbar'))
+console.log(document.querySelector('#topbar'))
+```
+![Query Selector](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/JavaScript_Language/Media/Query%20Selectors.PNG)
+
 ### 31. JavaScript - Update HTML Elements
+- We will learn how to Update HTML Content and Attributes using JavaScript
+- Let's say we wanted to do a website of a counter.
+- Consider the below HTML, CSS and JavaScript codes.
+- Each second it will change the value at the centre decreasingly and also change the background image.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <img id="bg-image"
+        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5q0GXOJFaa7RjMbx2WojtTkCWirh8dbxXg&usqp=CAU'
+        alt="Vector Background" />
+      <h1 id="countdown">10</h1>
+    </div>
+  </header>
+  <script src="/script.js"></script>
+</body>
+
+</html>
+```
+```css
+body {
+  margin: 0;
+}
+
+header div {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+#bg-image {
+  width: 100%;
+  height: 100vh;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  margin: 0;
+}
+```
+```javascript
+console.log('JS Loaded')
+
+// Passing the element with the id of 'countdown' to the variable called 'countdownElement'
+var countdownElement = document.getElementById('countdown');
+var bgImageElement = document.getElementById('bg-image');
+console.log(countdownElement) // Output: <h1 id="countdown">10</h1>
+console.log(bgImageElement.src)
+
+// .innerHTML is an HTML element property that has two uses for web developers.
+// You can use it to get the internal HTML content of any HTML element as an HTML string.
+// You can also use it to set or change elements' innerHTML content.
+var initialCountdownVal = countdownElement.innerHTML;
+var initialImage = bgImageElement.src;
+console.log(initialCountdownVal) // Output: 10
+
+// We want this line of code to run every second.
+// The setInterval() function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using clearInterval() .
+setInterval(function() {
+  initialCountdownVal = initialCountdownVal - 1;
+
+  // Condition where the counter stops at 0
+  if (initialCountdownVal >= 0) {
+    countdownElement.innerHTML = initialCountdownVal;
+
+    // Condition to change the background image
+    if (initialCountdownVal % 2 === 0) {
+      bgImageElement.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5q0GXOJFaa7RjMbx2WojtTkCWirh8dbxXg&usqp=CAU'
+    }
+    else {
+      bgImageElement.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtZkSaNaF3fNJPX7J-_WE-hT1jWceON-36wA&usqp=CAU'
+    }
+  }
+}, 1000)
+```
+![Update HTML Elements 1](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/JavaScript_Language/Media/Update%20HTML%20Elements%201.png)
+![Update HTML Elements 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/JavaScript_Language/Media/Update%20HTML%20Elements%202.png)
+
 ### 32. JavaScript - Updating Styles
 ### 33. JavaScript - Intro to Events
 ### 34. JavaScript - Add and Remove Classes from HTML Elements
