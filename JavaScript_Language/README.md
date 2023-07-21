@@ -1423,10 +1423,566 @@ setInterval(function() {
 ![Update HTML Elements 2](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/JavaScript_Language/Media/Update%20HTML%20Elements%202.png)
 
 ### 32. JavaScript - Updating Styles
-### 33. JavaScript - Intro to Events
+- We learn how to update the styles of a HTML Element.
+- To update styles, we can use the styles property of DOM.
+- Syntax to update style or HTML element.
+
+```javascript
+// Sytax
+var selectedElement = getElementBId('selector') / querySelector('selector')
+selectedElement.style.{propertyName} = value;
+
+// Example
+selectedElement.style.width = '300px'
+```
+- Consider the following HTML, CSS and JavaScript code.
+- Each second, the number will decrease and every second, the font size decreases by 100px.
+- The image size would also decreases by 10% for each iterarion.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <img id="bg-image"
+        src='https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000'
+        alt="Vector Background" />
+      <h1 id="countdown">10</h1>
+    </div>
+  </header>
+  <script src="/script.js"></script>
+</body>
+
+</html>
+```
+```css
+body {
+  margin: 0;
+}
+
+header div {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+#bg-image {
+  width: 100%;
+  height: 100vh;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1000px;
+  margin: 0;
+}
+```
+```javascript
+console.log('script imported');
+// To get the element
+var countdownElement = document.getElementById("countdown");
+var bgImage = document.getElementById("bg-image");
+
+// To get the value inside the element
+var initialCountdownVal = countdownElement.innerHTML;
+
+// To do changes during the countdown
+// You may also stop the interval using clearInterval(interval)
+setInterval(function() {
+  initialCountdownVal = initialCountdownVal - 1;
+
+  // To change the view of the value of the number
+  if (initialCountdownVal >= 0) {
+    countdownElement.innerHTML = initialCountdownVal;
+
+    // Reduce the fontsize
+    countdownElement.style.fontSize = initialCountdownVal * 100 + "px"
+
+    // Reduce the image size.
+    bgImage.style.width = initialCountdownVal * 10 + "%"
+  }
+}, 1000);
+```
+
+### 33. JavaScript - Intro to Events\
+- When some action happens in the webpage, that action is called Event.
+- For example:
+```
+- User clicking the mouse over a certain element.
+- User hovering the cursor over a certain element.
+- User pressing a key on the keyboard.
+- User resizing or closing the browser window.
+- A form being submitted
+- A video being played. or paused, or finishing play.
+```
+- How to handle events in JavaScript?
+```javascript
+// There are two ways we can handle events:
+var selectedElement = getElementById('selector') / querySelector('selector')
+
+// Method 1: Using Events Properties
+// Syntax:
+selectedElement.{eventProperty} = function() {}
+// Example:
+selectedElemet.onclick = function() {}
+
+// Method 2: Using addEventListener()
+// Syntax:
+selectedElement.addEventListener({eventName}, function() {})
+// For example:
+selectedElement.addEventListener('click', function() {})
+```
+- Consider the following HTML, CSS and JavaSript code.
+- This code will change the background colour and also the button colour once the button is pressed.
+- Further coding can be done.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <button id="btn-click"> Click Me!! </button>
+    </div>
+  </header>
+  <script src="script.js"></script>
+</body>
+
+</html>
+```
+```css
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+header div {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background-color: lightblue;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+}
+```
+```javascript
+console.log('script imported')
+
+// Find the desired button element
+var btn = document.getElementById("btn-click");
+var mainDiv = document.querySelector("header div");
+
+console.log(mainDiv)
+
+// Function to check and give alert messages when the button is clicked
+function onBtnClick() {
+  // This will pop up the message that the button has been clicked.
+  alert("Button Clicked");
+
+  // After clicked and after pop up message, It changes the button colour.
+  btn.style.backgroundColor = "lightcoral"
+
+  // Changing the background color
+  mainDiv.style.backgroundColor = "yellow"
+}
+
+// Using event handler property
+btn.onclick = onBtnClick;
+
+// Accepts 2 arguments: The type of event (put the name of event such as click), function.
+btn.addEventListener('click', function() {
+  alert('Anonymous Function Called')
+})
+```
+
 ### 34. JavaScript - Add and Remove Classes from HTML Elements
+- Modern browser gives us access to a property called "classList".
+- It holds all the classes of an HTML element.
+- These classes properties not available in Internet Explorer 9 and below.
+```javascript
+// We can use the method called add()
+
+
+var selectedElement = getElementById('selector')/querySelector('selector')
+// Syntax:
+selectedElement.classList.add('MyClass');
+// For example:
+selectedElement.classList.add('show')
+```
+- Consider the following HTML, CSS and Javascript code.
+- When the centre button clicked it reduces the size or increase the size
+- When the sidebar button is clicked it opens and closes the sidebar.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS - Intro to Events, Event Listeners and Event Handlers</title>
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/35c398e458.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <i id="toggle-icon" class="fas fa-bars"></i>
+      <div id="sidebar" class="hide">
+        <ul>
+          <li>Home</li>
+          <li>Settings</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <h1 id="main-heading" class="small">Add/Remove Classes</h1>
+      <button id="btn-click">Click Me!!</button>
+    </div>
+  </header>
+  <script src="/script.js"></script>
+</body>
+
+</html>
+```
+```css
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  display: none;
+}
+
+header>div {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background-color: lightblue;
+  text-align: center;
+}
+
+button {
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+#main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.small {
+  font-size: 24px;
+}
+
+.big {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    display: block;
+    font-size: 36px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  nav i {
+    cursor: pointer;
+  }
+
+  #sidebar {
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    max-width: 270px;
+    background-color: white;
+    position: fixed;
+    left: -270px;
+    top: 72px;
+  }
+
+  #sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 32px;
+  }
+
+  #sidebar ul li {
+    padding-left: 0;
+    font-size: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .hide {
+    display: none;
+    transform: translateX(-270px);
+  }
+
+  .show {
+    display: block;
+    transform: translateX(270px);
+  }
+}
+```
+```javascript
+var mainHeading = document.getElementById("main-heading");
+var btn = document.getElementById("btn-click");
+var sideBar = document.getElementById("sidebar");
+var toggleButton = document.getElementById("toggle-icon")
+
+// To remove the class we can add another method called remove().
+// Timeout, after certain time, it triggers the function.
+// setTimeout(function() {
+
+// }, 1500);
+
+btn.addEventListener('click', function() {
+
+  if(mainHeading.classList.contains('small')) {
+    // add() method can be used to add classes.
+    // The .big class overrides the .small properties.
+    mainHeading.classList.remove('small');
+    mainHeading.classList.add('big');
+  }
+  else {
+    mainHeading.classList.remove('big');
+    mainHeading.classList.add('small');
+  }
+  
+});
+
+toggleButton.addEventListener('click', function() {
+
+  // To check if the class is already present in the classList or not - .contains()
+  if(sideBar.classList.contains('show')) {
+    sideBar.classList.remove('show');
+    sideBar.classList.add('hide');
+  }
+  else {
+    sideBar.classList.remove('hide');
+    sideBar.classList.add('show');
+  }
+});
+```
+
 ### 35. JavaScript - Getting Styles
+- We will learn how to get element styles values using JavaScript.
+- In this lesson, we are trying to access the elements from the CSS file instead of styling in HTML file.
+```javascript
+// There are two was we can get Element style value:
+
+var selectedElement = getElementId('selector') / querySelector('selector')
+
+// INLINE STYLES
+// Syntax:
+selectedElement.style.{inline-style-property}
+// For example:
+selectedElement.style.width
+
+// CSS FILE
+// Syntax:
+window.getComputedStyle(selectedElement).{style-property-name}
+// For example:
+window.getComputedStyle(selectedElement.width
+```
+- Consider the following HTML, CSS and JavaScript code.
+- The font of the sentence will be increasing and decreasing based on the button that you pressed.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS - Getting Styles</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/35c398e458.js"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 id="main-heading" class="small">Fetch Styles</h1>
+      <button id="btn-decrease">Font -</button>
+      <button id="btn-increase" style="margin-right: 8px;">Font +</button>
+    </div>
+  </header>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
+```
+```css
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  display: none;
+}
+
+header>div {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background-color: lightblue;
+  text-align: center;
+}
+
+button {
+  font-size: 24px;
+  margin-top: 24px;
+  margin-right: 36px;
+  padding: 12px 24px;
+}
+
+#main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.small {
+  font-size: 24px;
+}
+
+.big {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    display: block;
+    font-size: 36px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  nav i {
+    cursor: pointer;
+  }
+
+  #sidebar {
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    max-width: 270px;
+    background-color: white;
+    position: fixed;
+    left: -270px;
+    top: 72px;
+  }
+
+  #sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 32px;
+  }
+
+  #sidebar ul li {
+    padding-left: 0;
+    font-size: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .hide {
+    display: none;
+    transform: translateX(-270px);
+  }
+
+  .show {
+    display: block;
+    transform: translateX(270px);
+  }
+}
+```
+```javascript
+var btnDecreaseFont = document.getElementById("btn-decrease");
+var btnIncreaseFont = document.getElementById("btn-increase");
+var mainHeading = document.getElementById("main-heading");
+
+// To access styles in CSS file.
+var initialFontSize = window.getComputedStyle(mainHeading).fontSize;
+
+// To get the value of the font size. Here also we parse the string into integer
+initialFontSize = parseInt(initialFontSize.substring(0, (initialFontSize.length - 2)));
+
+// Font decrease when decrease font button pressed
+btnDecreaseFont.addEventListener('click', function() {
+  initialFontSize = initialFontSize - 10
+  mainHeading.style.fontSize = initialFontSize + "px"
+})
+
+// Font incrase when increase font button pressed
+btnIncreaseFont.addEventListener('click', function() {
+  initialFontSize = initialFontSize + 10
+  mainHeading.style.fontSize = initialFontSize + "px"
+})
+```
+
 ### 36. JavaScript - Form Events
+- Form events: change, focus, blur, submit.
+- **change:** Is triggered when the content of an input field is changed or when the user sleects a value from the dropdown etc.
+- **focus:** Triggered when the input field is focused by the user.
+- **blur:** Triggered when the input field loses focus.
+- **submit:** Triggered when the submit button is clicked by the user.
+
 ### 37. JavaScript - Keyboard Events
 ### 38. JavaScript - Mouse Events
 ### 39. JavaScript - Create HTML Elements - Part 1
