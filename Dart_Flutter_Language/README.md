@@ -269,8 +269,73 @@ class SuperUser extends User {
 }
 ```
 
-## #4 Flutter Tutorial for Beginners - Flutter Overview
+## #5 Flutter Tutorial for Beginners - Scaffold & AppBar
 - 99% that we do will be inside the lib folder such as main.dart.
+- The code below is some basics on showing the UI of our app.
+```dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('myFirstApp'),
+      centerTitle: true,
+      backgroundColor: Colors.lightBlue,
+    ),
+
+    body: Center(
+      child: Text('Hello Ninjas'),
+    ),
+  ),
+));
+```
+![#1 - Basic App Layout](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/Dart_Flutter_Language/Media/%231-%20Basic%20Application%20Layout.PNG)
+
+## #6 Flutter Tutorial for Beginners - Colours and Font
+- pubspec.yaml is a bit like a configuration file of our project.
+- To add some of the font, we may go to Google Downloads and add it into a folder file that we created inside our project.
+- Then we may edit some of the 
+```Dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('UM Events'),
+      centerTitle: true,
+      backgroundColor: Colors.purpleAccent,
+    ),
+
+    body: Center(
+      child: Text(
+        'Hello Ninjas',
+        style: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2.0,
+          color: Colors.grey[600],
+          fontFamily: 'AgbalumoRegular',
+        )
+      ),
+    ),
+
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {},
+      child: Text('click'),
+      backgroundColor: Colors.purpleAccent,
+    ),
+
+  ),
+));
+```
+![#2 - Colour and Font for the App](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/Dart_Flutter_Language/Media/%232%20-%20Colour%20App%20and%20Font.jpg)
+
+## #7 Flutter Tutorial for Beginners - Stateless Widget and Hot Reload
+- Flutter also have a hot reload properties.
+- **Stateless Widgets:** The state of the widget cannot change over time.
+- **Stateful Widgets:** The state of the widget can change over time.
 - 
 
 
