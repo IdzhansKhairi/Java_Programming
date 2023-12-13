@@ -295,7 +295,94 @@ void main() => runApp(MaterialApp(
 ## #6 Flutter Tutorial for Beginners - Colours and Font
 - pubspec.yaml is a bit like a configuration file of our project.
 - To add some of the font, we may go to Google Downloads and add it into a folder file that we created inside our project.
-- Then we may edit some of the 
+- Then we may edit some of the
+```yaml
+name: myflutterapp
+description: "Flutter App for Learning and Testing"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: AgbalumoRegular
+      fonts:
+        - asset: fonts/Agbalumo-Regular.ttf
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+```
 ```Dart
 import 'package:flutter/material.dart';
 
@@ -336,9 +423,309 @@ void main() => runApp(MaterialApp(
 - Flutter also have a hot reload properties.
 - **Stateless Widgets:** The state of the widget cannot change over time.
 - **Stateful Widgets:** The state of the widget can change over time.
-- 
+- Before this we need to make a hot restart to see the changes that we made on our application.
+- However, with the code changes below here, only clicked save, we can see the changes already.
+```Dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+// This actually helps to hot restart to be triggered everytime we clicked save
+// So that when changes are made, we don't need to hot restart everything.
+// We can just use this instance whenever that we need.
+class Home extends StatelessWidget {
+
+  // Over here means we return a widget.
+  // The code that we run here will override the code from its ancestor which is in this case, StatelessWidget.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My First App'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: Text(
+            'Hello Ninjas',
+            style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+              color: Colors.grey[600],
+              fontFamily: 'AgbalumoRegular',
+            )
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Hello'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
 
 
+## #8 Flutter Tutorial for Beginners - Images & Assets
+-  We can use a web image or an asset image where we use the one from our source file.
+-  NetworkImage() properties can help you to show the desired image from any website.
+```Dart
+import 'package:flutter/material.dart';
 
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My First App'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: Image(
+          image: NetworkImage('https://preview.redd.it/r3lcc7gf64791.png?width=540&format=png&auto=webp&s=9d32ec46f884486fd59dfd01453bf5d07bf30d75'),
+        )
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Hello'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+
+- For the Asset Image, it is the images that you saved inside our project file.
+- To do this, make sure that you make a new file called assets and put the pictures inside it.'
+- Other than that, since we wanted to use the assests image, you also have to define it inside the pubspec.yaml file.
+- If we have more than one assets picture, please declare it inside the pubspec.yaml file. If not, it will not be shown.
+```yaml
+# To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/sha.nyy_2919085602611959201_1531335952_1_1080x1350.jpg
+```
+```Dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Girlfriend Pics App'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: Image(
+          image: AssetImage('assets/sha.nyy_2919085602611959201_1531335952_1_1080x1350.jpg'),
+        )
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Call Her'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+- If there is so many pictures, you may only initialize the assets folder only.
+- And then you need to do the URL to that assets picture. Dont forget there "/".
+```yaml
+# To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+```
+
+
+## #9 Flutter Tutorial for Beginners - Buttons and Icons
+- The first one is the icon.
+- For icon you may customize it a bit like colour and also the design.
+```dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Girlfriend Pics App'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.purpleAccent,
+          size: 50.0,
+        )
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Call Her'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+
+- For button we may use a lot kind of button.
+- The example below is the one that will use text to show the button.
+```dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App Test'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            print("You clicked Me");
+          },
+          child: Text('New button'),
+          style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(Colors.lightBlue)
+          )
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Call Her'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+
+- Other than that we may also put icon and also some text into the button.
+- Below are the code example where you may put the icon.
+```
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App Test'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: ElevatedButton.icon(
+          onPressed: () {},
+          icon: Icon(
+            Icons.mail
+          ),
+          label: Text('Email'),
+          style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(Colors.amber)
+          ),
+        )
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Call Her'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+
+- We can also just using an Icon to become a button.
+- This basically uses the Icon to act as a functional button
+```dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App Test'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Center(
+        child: IconButton(
+          onPressed: null,
+          icon: Icon(Icons.alternate_email),
+          color: Colors.amber,
+        )
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Call Her'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
+
+## #10 Flutter Tutorial for Beginners - Containers and Padding
 
 
