@@ -726,6 +726,68 @@ class Home extends StatelessWidget {
 }
 ```
 
-## #10 Flutter Tutorial for Beginners - Containers and Padding
+## #10 Flutter Tutorial for Beginners - Containers and Padding (Forgot to save and stuck here LMAO)
+ 
 
+
+## #10 Flutter Tutorial for Beginners - Containers and Padding
+- By using flex, as we can see the code below, it basically divides it into 6 partitions.
+- Number one going to take 3 out of 6 partitions, number 2 going to take 2 out of 6 partitions and number 1 going to take 1 out of 6 partitions.
+```dart
+import 'package:flutter/material.dart';
+
+// Material App going to become the wrapper of our application
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App Test'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+      ),
+
+      body: Row(
+        children: <Widget>[
+          // By wrapping a widget inside an expanded widget, we be able to ensure that it takes all of the remaining space
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('3'),
+            ),
+          ),
+        ],
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Click'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+    );
+  }
+}
+```
 
