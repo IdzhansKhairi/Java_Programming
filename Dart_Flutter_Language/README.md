@@ -906,7 +906,143 @@ class NinjaCard extends StatelessWidget {
 ![First Flutter Project](https://github.com/IdzhansKhairi/Programming_Notes/blob/main/Dart_Flutter_Language/Media/%234%20First%20Flutter%20Project.jpg)
 
 
-## #15 Flutter Tutorial for Beginners - Stateful Widgets
+## #16 Flutter Tutorial for Beginners - Stateful Widgets
+- So far we only use stateless widget because we are not using dynamic data.
+- To display a dynamic data a stateful widget where it can change state on a time.
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  // Determine what is going to be shown at our home page of our app
+  home: NinjaCard()
+));
+
+class NinjaCard extends StatefulWidget {
+
+  @override
+  State<NinjaCard> createState() => _NinjaCardState();
+}
+
+class _NinjaCardState extends State<NinjaCard> {
+
+  int ninjaLevel = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    // Create layout and stuff
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: Text('Ninja ID Card'),
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 20.0,
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.grey[850],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // When it is called, it will rebuild the app. Basically triggering 'Build' to re-run
+          setState(() {
+            ninjaLevel += 1;
+          });
+        },
+        child: Icon(
+            Icons.add,
+        color: Colors.white,),
+        backgroundColor: Colors.grey[800],
+
+      ),
+      body: Padding(
+        // Give some padding to the body of the app
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            // To put the image at the center of the page in a circular shape
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/Guitar Profile Pic.jpg'),
+                radius: 40.0,
+
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[800],
+            ),
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            // Make some distance or some box with the height if 10.0px
+            SizedBox(height: 10.0),
+
+            Text(
+              'Muhammad Idzhans Khairi',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0),
+
+            Text(
+              'NINJA LEVEL',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            // Make some distance or some box with the height if 10.0px
+            SizedBox(height: 10.0),
+
+            Text(
+              '$ninjaLevel',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'idzhans.khairi@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        )
+      )
+    );
+  }
+}
+```
+
+## #17 Flutter Tutorial for Beginners - Lists of Data
+
+
+
+
 
 
 
